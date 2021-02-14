@@ -1,0 +1,51 @@
+=============================================================
+To run the experiments the following packages are necessary:
+tensorflow2 (we use version 2.1.0)
+numpy (we use version 1.18.2)
+matplotlib (we use version 2.1.2)
+absl-py (we use version 0.9.0)
+opencv-python (we use version 4.1.2.30)
+=============================================================
+
+============================================================
+To run the matrix experiment:
+Go to the /experiments/matrix_game directory and execute: 
+python run_matrix.py —save_path /Users/path/to/save/results
+============================================================
+
+==================================================================
+To run the finite TMDP experiment:
+Go to the /experiments/finite_tmdp directory and execute: 
+python run_finite_tmdp.py —save_path /Users/path/to/save/results
+==================================================================
+
+===================================================================================================================
+To run the catch-prey experiment with Logical Team Q-learning:
+Go to the /experiments directory and execute: 
+python -m catch_prey.LTQL.run —save_path /Users/path/to/save/results/
+
+To test the policy we already provide:
+Go to the /experiments/catch_prey/LTQL directory and execute: 
+python test_policy.py —path /path/to/experiments/catch_prey/LTQL/results —nomake_videos —number_games 1000
+
+To generate a video from the learnt policy:
+Go to the /experiments/catch_prey/LTQL directory and execute: 
+python test_policy.py —path /path/to/experiments/catch_prey/LTQL/results/ —make_videos —number_games 1
+
+To run the catch-prey experiment with Qmix:
+Go to the /experiments directory and execute: 
+python -m catch_prey.Qmix.run —save_path /Users/path/to/save/results/
+
+To run the catch-prey experiment with Hysteretic Q-learning:
+Go to the /experiments directory and execute: 
+python -m catch_prey.HystereticQ.run —save_path /Users/path/to/save/results/
+
+To plot the returns and test win % curves:
+Go to the /experiments/catch_prey directory and execute: 
+python plot_results.py
+
+Running one seed for one agent takes approximately 12 hours in our hardware (2017 iMac with 3.8 GHz Intel Core i5
+and 16GB of RAM).
+===================================================================================================================
+
+
