@@ -219,6 +219,10 @@ class LTQL(object):
 
   def load_model(self):
     """load all networks"""
+    self._q_net.built = True
+    self._q_frozen_net.built = True
+    self._q_debiased_net.built = True
+    self._q_target_net.built = True
     self._q_net.load_weights(self._save_path + 'q_net.h5')
     self._q_frozen_net.load_weights(self._save_path + 'q_frozen_net.h5')
     self._q_debiased_net.load_weights(self._save_path + 'q_debiased_net.h5')
